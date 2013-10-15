@@ -50,7 +50,9 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.get('/orders/sell/new', function(req, res) {
-  res.render('new_order');
+  Item.find(function(err, items) {
+    res.render('new_order', { items: items });
+  });
 });
 
 http.createServer(app).listen(app.get('port'), function(){

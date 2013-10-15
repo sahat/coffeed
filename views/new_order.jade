@@ -9,18 +9,9 @@ block content
           th Name
           th Quantity
       tbody
-        tr
-          td 1
-          td Mark
-          td
-            input.span1(type='text', value=0)
-        tr
-          td 2
-          td Jacob
-          td
-            input.span1(type='text', value=0)
-        tr
-          td 3
-          td Larry
-          td
-            input.span1(type='text', value=0)
+        each item, i in items
+          tr
+            td.span1= i+1
+            td= item.name
+            td.span1
+              input(type='text', value=0)
