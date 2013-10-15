@@ -54,6 +54,11 @@ app.get('/orders/sell/new', function(req, res) {
     res.render('new_order', { items: items });
   });
 });
+app.get('/orders/create/new', function(req, res) {
+  Item.find({ type: 'create' }, function(err, items) {
+    res.render('new_order', { items: items });
+  });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
