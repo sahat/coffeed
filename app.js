@@ -8,8 +8,24 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var mongoose = require('mongoose');
 
 var app = express();
+mongoose.connect('localhost');
+
+var Item = mongoose.model('Item', {
+  name: String,
+  count: { type: Number, default: 0 }
+});
+
+var Order = mongoose.model('Order', {
+  items: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Item' }],
+  location: String,
+  user: String,
+  created_at: Date
+});
+
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
