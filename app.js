@@ -19,7 +19,11 @@ var Item = mongoose.model('Item', {
 });
 
 var Order = mongoose.model('Order', {
-  items: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Item' }],
+  type: String,
+  items: [{
+    name: String,
+    quantity: Number
+  }],
   location: String,
   user: String,
   created_at: Date
