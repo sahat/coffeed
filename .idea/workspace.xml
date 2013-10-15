@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1426fb8-8e37-458f-af55-ae32c0305227" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/new_order.jade" afterPath="$PROJECT_DIR$/views/new_order.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
+    <list default="true" id="a1426fb8-8e37-458f-af55-ae32c0305227" name="Default" comment="added index counter and reduced input width, removed bottom margin on new order page">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="coffeed.iws" />
@@ -37,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_order.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new_order.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/new_order.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="12" selection-start="220" selection-end="220" vertical-scroll-proportion="0.32846716" vertical-offset="0" max-vertical-offset="548">
+            <state line="12" column="12" selection-start="220" selection-end="220" vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
@@ -55,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="528" selection-end="528" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="315">
+            <state line="11" column="41" selection-start="311" selection-end="311" vertical-scroll-proportion="0.3010949" vertical-offset="0" max-vertical-offset="548">
               <folding />
             </state>
           </provider>
@@ -92,11 +90,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/new_order.jade" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
       </list>
     </option>
   </component>
@@ -422,7 +420,11 @@
       <created>1381870432225</created>
       <updated>1381870432225</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added index counter and reduced input width, removed bottom margin on new order page">
+      <created>1381871160919</created>
+      <updated>1381871160919</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -461,7 +463,8 @@
     <MESSAGE value="Order template" />
     <MESSAGE value="Updated order schema" />
     <MESSAGE value="updated item schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated item schema" />
+    <MESSAGE value="added index counter and reduced input width, removed bottom margin on new order page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added index counter and reduced input width, removed bottom margin on new order page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -549,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="528" selection-end="528" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="990">
@@ -572,7 +568,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/new_order.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="220" selection-end="220" vertical-scroll-proportion="0.32846716" vertical-offset="0" max-vertical-offset="548">
+        <state line="12" column="12" selection-start="220" selection-end="220" vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="41" selection-start="311" selection-end="311" vertical-scroll-proportion="0.3010949" vertical-offset="0" max-vertical-offset="548">
           <folding />
         </state>
       </provider>
