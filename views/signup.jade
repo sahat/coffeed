@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h2 Sign Up
+  form
+    label First Name
+    input.span3(type='text', name='firstname')
+    label Last Name
+    input.span3(type='text', name='lastname')
+    label Email Address
+    input.span3(type='email', name='email')
+    label Username
+    input.span3(type='text', name='username')
+    label Password
+    input.span3(type='password', name='password')
+    p
+      input.btn.btn-primary(type='submit', value='Sign up')

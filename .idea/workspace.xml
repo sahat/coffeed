@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1426fb8-8e37-458f-af55-ae32c0305227" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/signup.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/new_order.jade" afterPath="$PROJECT_DIR$/views/new_order.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,16 +32,25 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1065">
+            <state line="69" column="23" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="1425">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_order.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="signup.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/signup.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="32" selection-start="424" selection-end="424" vertical-scroll-proportion="0.4379562" vertical-offset="0" max-vertical-offset="548">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_order.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/new_order.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="37" selection-start="126" selection-end="126" vertical-scroll-proportion="0.19160584" vertical-offset="0" max-vertical-offset="548">
+            <state line="10" column="21" selection-start="166" selection-end="166" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -66,7 +77,7 @@
       <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="20" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-14.2" vertical-offset="125" max-vertical-offset="885">
+            <state line="22" column="31" selection-start="768" selection-end="768" vertical-scroll-proportion="-2.8" vertical-offset="260" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -90,12 +101,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/new_order.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/signup.jade" />
       </list>
     </option>
   </component>
@@ -429,7 +441,11 @@
       <created>1381871554879</created>
       <updated>1381871554879</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="place order button">
+      <created>1381874518320</created>
+      <updated>1381874518320</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -470,19 +486,13 @@
     <MESSAGE value="updated item schema" />
     <MESSAGE value="added index counter and reduced input width, removed bottom margin on new order page" />
     <MESSAGE value="added URL to linked buttons, removed &quot;hero unit&quot; from homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added URL to linked buttons, removed &quot;hero unit&quot; from homepage" />
+    <MESSAGE value="place order button" />
+    <option name="LAST_COMMIT_MESSAGE" value="place order button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/todc-bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="39525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
@@ -544,13 +554,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="20" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-14.2" vertical-offset="125" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
@@ -565,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="27" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="34" selection-start="304" selection-end="304" vertical-scroll-proportion="-6.6" vertical-offset="0" max-vertical-offset="255">
@@ -581,7 +577,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/new_order.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="126" selection-end="126" vertical-scroll-proportion="0.19160584" vertical-offset="0" max-vertical-offset="548">
+        <state line="10" column="21" selection-start="166" selection-end="166" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="31" selection-start="768" selection-end="768" vertical-scroll-proportion="-2.8" vertical-offset="260" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="23" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/signup.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="424" selection-end="424" vertical-scroll-proportion="0.4379562" vertical-offset="0" max-vertical-offset="548">
           <folding />
         </state>
       </provider>

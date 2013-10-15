@@ -3,11 +3,6 @@ extends layout
 block content
   h2 Order Items
 
-  p
-    button.btn.btn-large.btn-success
-      i.icon-shopping-cart.icon-white
-      |  Place Order
-
   table.table.table-striped.table-bordered
     thead
         tr
@@ -21,3 +16,7 @@ block content
             td= item.name
             td.span1
               input(type='text', value=0)
+
+  button.btn.btn-large.btn-success
+    i.icon-shopping-cart.icon-white
+    |  Place Order

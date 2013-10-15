@@ -20,7 +20,7 @@ html
               li.active
                 a(href='#') Home
               li
-                a(href='#about') About
+                a(href='/signup') Signup
               li
                 a(href='#contact') Contact
               li.dropdown
@@ -40,8 +40,8 @@ html
                     a(href='#') Separated link
                   li
                     a(href='#') One more separated link
-            form.navbar-form.pull-right
-              input.span2(type='text', placeholder='Email')
+            form.navbar-form.pull-right(action='/login', method='POST')
+              input.span2(type='text', placeholder='Username')
               input.span2(type='password', placeholder='Password')
               button.btn.btn-primary(type='submit') Sign in
     .container
