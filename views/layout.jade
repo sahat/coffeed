@@ -7,6 +7,8 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
   body
+    if message
+      .alert.alert-danger Message
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container
@@ -40,10 +42,13 @@ html
                     a(href='#') Separated link
                   li
                     a(href='#') One more separated link
-            form.navbar-form.pull-right(action='/login', method='POST')
-              input.span2(type='text', placeholder='Username')
-              input.span2(type='password', placeholder='Password')
-              button.btn.btn-primary(type='submit') Sign in
+            if user
+              p.navbar-text Signed in as #{user.username}
+            else
+              form.navbar-form.pull-right(action='/login', method='POST')
+                input.span2(type='text', placeholder='Username')
+                input.span2(type='password', placeholder='Password')
+                button.btn.btn-primary(type='submit') Sign in
     .container
       block content
       hr

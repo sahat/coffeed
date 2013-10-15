@@ -2,7 +2,7 @@ extends layout
 
 block content
   h2 Sign Up
-  form
+  form(action='/signup', method='POST')
     label First Name
     input.span3(type='text', name='firstname')
     label Last Name
