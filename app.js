@@ -14,8 +14,7 @@ var app = express();
 mongoose.connect('localhost');
 
 var Item = mongoose.model('Item', {
-  name: String,
-  count: { type: Number, default: 0 }
+  name: String
 });
 
 var Order = mongoose.model('Order', {

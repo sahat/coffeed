@@ -29,7 +29,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="379" selection-end="379" vertical-scroll-proportion="0.49053356" vertical-offset="0" max-vertical-offset="975">
+            <state line="16" column="14" selection-start="335" selection-end="335" vertical-scroll-proportion="0.4130809" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -380,7 +380,11 @@
       <created>1381870020835</created>
       <updated>1381870020835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated order schema">
+      <created>1381870192023</created>
+      <updated>1381870192023</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -417,7 +421,8 @@
     </option>
     <MESSAGE value="order buttons on index page" />
     <MESSAGE value="Order template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order template" />
+    <MESSAGE value="Updated order schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated order schema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -528,7 +533,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="379" selection-end="379" vertical-scroll-proportion="0.49053356" vertical-offset="0" max-vertical-offset="975">
+        <state line="16" column="14" selection-start="335" selection-end="335" vertical-scroll-proportion="0.4130809" vertical-offset="0" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
