@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1426fb8-8e37-458f-af55-ae32c0305227" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/signup.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/new_order.jade" afterPath="$PROJECT_DIR$/views/new_order.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/signup.jade" afterPath="$PROJECT_DIR$/views/signup.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="coffeed.iws" />
@@ -29,19 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="23" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="1425">
+            <state line="90" column="0" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.8035714" vertical-offset="900" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.jade" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="signup.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/signup.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="424" selection-end="424" vertical-scroll-proportion="0.4379562" vertical-offset="0" max-vertical-offset="548">
+            <state line="8" column="45" selection-start="216" selection-end="216" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -65,10 +65,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="34" selection-start="304" selection-end="304" vertical-scroll-proportion="-6.6" vertical-offset="0" max-vertical-offset="255">
+            <state line="3" column="10" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="1" selection-start="43" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
@@ -77,7 +95,7 @@
       <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="31" selection-start="768" selection-end="768" vertical-scroll-proportion="-2.8" vertical-offset="260" max-vertical-offset="885">
+            <state line="14" column="34" selection-start="480" selection-end="480" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -103,11 +121,11 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/new_order.jade" />
+        <option value="$PROJECT_DIR$/views/signup.jade" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/signup.jade" />
       </list>
     </option>
   </component>
@@ -184,11 +202,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coffeed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coffeed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coffeed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="coffeed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,7 +495,11 @@
       <created>1381874518320</created>
       <updated>1381874518320</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="passport.js and signup page">
+      <created>1381875798711</created>
+      <updated>1381875798711</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -487,19 +541,13 @@
     <MESSAGE value="added index counter and reduced input width, removed bottom margin on new order page" />
     <MESSAGE value="added URL to linked buttons, removed &quot;hero unit&quot; from homepage" />
     <MESSAGE value="place order button" />
-    <option name="LAST_COMMIT_MESSAGE" value="place order button" />
+    <MESSAGE value="passport.js and signup page" />
+    <option name="LAST_COMMIT_MESSAGE" value="passport.js and signup page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
@@ -554,23 +602,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="18" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="304" selection-end="304" vertical-scroll-proportion="-6.6" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
@@ -582,23 +616,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/signup.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="216" selection-end="216" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="1" selection-start="43" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="10" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="768" selection-end="768" vertical-scroll-proportion="-2.8" vertical-offset="260" max-vertical-offset="885">
+        <state line="14" column="34" selection-start="480" selection-end="480" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="23" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/signup.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="424" selection-end="424" vertical-scroll-proportion="0.4379562" vertical-offset="0" max-vertical-offset="548">
+        <state line="90" column="0" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.8035714" vertical-offset="900" max-vertical-offset="2535">
           <folding />
         </state>
       </provider>
