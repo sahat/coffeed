@@ -145,13 +145,21 @@ app.post('/signup', function(req, res) {
 app.get('/', function(req, res){
   res.render('index', { user: req.user });
 });
-app.get('/users', user.list);
+
+app.get('/orders/sell', function(req, res) {
+  res.render('view_orders')
+});
 
 app.get('/orders/sell/new', function(req, res) {
   Item.find(function(err, items) {
     res.render('new_order', { items: items });
   });
 });
+
+app.get('/orders/create', function(req, res) {
+  res.render('view_orders')
+});
+
 app.get('/orders/create/new', function(req, res) {
   Item.find({ type: 'create' }, function(err, items) {
     res.render('new_order', { items: items });
