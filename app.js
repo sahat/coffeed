@@ -48,13 +48,16 @@ User.methods.comparePassword = function(candidatePassword, cb) {
 	});
 };
 
-
+/**
+ * Database Schema
+ */
 var Item = mongoose.model('Item', {
   name: String
 });
 
 var Order = mongoose.model('Order', {
-  type: String,
+  orderNumber: Number, // auto-increment?
+  orderType: String,
   items: [{
     name: String,
     quantity: Number
@@ -152,15 +155,18 @@ app.get('/orders/sell', function(req, res) {
   res.render('view_orders')
 });
 
+app.get('/orders', function(req, res) {
+  var q = req.querystring.orderType;
+  res.render('view_orders')
+});
+
+
 app.get('/orders/sell/new', function(req, res) {
   Item.find(function(err, items) {
     res.render('new_order', { items: items });
   });
 });
 
-app.get('/orders/create', function(req, res) {
-  res.render('view_orders')
-});
 
 app.get('/orders/create/new', function(req, res) {
   Item.find({ type: 'create' }, function(err, items) {
