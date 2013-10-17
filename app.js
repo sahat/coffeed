@@ -159,6 +159,15 @@ app.get('/orders', function(req, res) {
   });
 });
 
+app.post('/orders', function(req, res) {
+  var order = new Order({
+    // pass req.body data
+  });
+  order.save(function(err) {
+    res.redirect('/orders');
+  });
+});
+
 app.get('/orders/:id', function(req, res) {
   var orderNumber = req.params.id;
   Order.findOne({ orderNumber: orderNumber }, function(err, order) {
