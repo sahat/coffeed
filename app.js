@@ -52,7 +52,8 @@ User.methods.comparePassword = function(candidatePassword, cb) {
  * Database Schema
  */
 var Item = mongoose.model('Item', {
-  name: String
+  name: String,
+  itemType: String
 });
 
 var Order = mongoose.model('Order', {
@@ -174,17 +175,10 @@ app.put('/orders/:id', function(req, res) {
   });
 });
 
-
-app.get('/orders/sell/new', function(req, res) {
-  Item.find(function(err, items) {
-    res.render('new_order', { items: items });
-  });
-});
-
-
-app.get('/orders/create/new', function(req, res) {
-  Item.find({ type: 'create' }, function(err, items) {
-    res.render('new_order', { items: items });
+app.get('/orders/new', function(req, res) {
+  var orderType = req.querystring.orderType;
+  Item.find({ itemType: orderType }, function(err, items) {
+    res.render('newOrder', { items: items });
   });
 });
 
