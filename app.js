@@ -151,10 +151,6 @@ app.get('/', function(req, res){
   res.render('index', { user: req.user });
 });
 
-app.get('/orders/sell', function(req, res) {
-  res.render('view_orders')
-});
-
 app.get('/orders', function(req, res) {
   var orderType = req.querystring.orderType;
   Order.find({ orderType: orderType }, function(err, orders) {
@@ -162,6 +158,12 @@ app.get('/orders', function(req, res) {
   });
 });
 
+app.get('/orders/:id', function(req, res) {
+  var orderNumber = req.params.id;
+  Order.findOne({ orderNumber: orderNumber }, function(err, order) {
+    return res.render('orderDetail', { order: order });
+  });
+});
 
 app.get('/orders/sell/new', function(req, res) {
   Item.find(function(err, items) {
