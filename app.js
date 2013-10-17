@@ -156,8 +156,10 @@ app.get('/orders/sell', function(req, res) {
 });
 
 app.get('/orders', function(req, res) {
-  var q = req.querystring.orderType;
-  res.render('view_orders')
+  var orderType = req.querystring.orderType;
+  Order.find({ orderType: orderType }, function(err, orders) {
+    res.render('existingOrders', { orders: orders });
+  });
 });
 
 
