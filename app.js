@@ -116,9 +116,11 @@ app.post('/login',
     failureRedirect: '/login',
     failureFlash: true })
 );
+
 app.get('/signup', function(req, res) {
   res.render('signup');
 });
+
 app.post('/signup', function(req, res) {
   var firstname = req.body.firstname;
   var lastname = req.body.lastname;
