@@ -165,6 +165,16 @@ app.get('/orders/:id', function(req, res) {
   });
 });
 
+app.put('/orders/:id', function(req, res) {
+  var order = req.body.order;
+  var orderNumber = req.params.id;
+  Order.findOne({ orderNumber: orderNumber }, function(err, order) {
+    // update the whole order object if attribute is changed
+    return res.render('orderDetail', { order: order });
+  });
+});
+
+
 app.get('/orders/sell/new', function(req, res) {
   Item.find(function(err, items) {
     res.render('new_order', { items: items });
