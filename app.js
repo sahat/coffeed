@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -142,7 +141,7 @@ app.post('/signup', function(req, res) {
 
   user.save(function(err) {
     req.login(user, function(err) {
-      if (err) { return next(err); }
+      if (err) { return console.error(err); }
       return res.redirect('/users/' + req.user.username);
     });
   });
