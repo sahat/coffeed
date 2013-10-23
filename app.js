@@ -9,9 +9,9 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var mongoose = require('mongoose');
-var passport = require('passport')
+var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var bcrypt = require('bcrypt')
+var bcrypt = require('bcrypt');
 
 var app = express();
 mongoose.connect('localhost');
@@ -56,7 +56,6 @@ var Item = mongoose.model('Item', {
 });
 
 var Order = mongoose.model('Order', {
-  orderNumber: Number, // auto-increment?
   orderType: String,
   items: [{
     name: String,
@@ -64,7 +63,7 @@ var Order = mongoose.model('Order', {
   }],
   location: String,
   user: String,
-  created_at: Date
+  created: { type: Date, default: Date.now }
 });
 
 passport.serializeUser(function(user, done) {

@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "coffeed",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,6 +7,10 @@
   },
   "dependencies": {
     "express": "3.4.0",
-    "jade": "*"
+    "jade": "*",
+    "bcrypt": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-local": "*"
   }
 }
