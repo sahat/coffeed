@@ -16,7 +16,7 @@ var bcrypt = require('bcrypt');
 var app = express();
 mongoose.connect('localhost');
 
-var User = mongoose.model('User', {
+var userSchema = mongoose.Schema({
   firstName: String,
   lastName: String,
   username: { type: String, required: true, unique: true },
@@ -24,7 +24,7 @@ var User = mongoose.model('User', {
   password: { type: String, required: true}
 });
 
-User.pre('save', function(next) {
+userSchema.pre('save', function(next) {
 	var user = this;
 
 	if(!user.isModified('password')) return next();
@@ -40,7 +40,7 @@ User.pre('save', function(next) {
 	});
 });
 
-User.methods.comparePassword = function(candidatePassword, cb) {
+userSchema.methods.comparePassword = function(candidatePassword, cb) {
 	bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
 		if(err) return cb(err);
 		cb(null, isMatch);
@@ -48,8 +48,11 @@ User.methods.comparePassword = function(candidatePassword, cb) {
 };
 
 /**
- * Database Schema
+ * Database Schema and Models
  */
+
+var User = mongoose.model('User', userSchema);
+
 var Item = mongoose.model('Item', {
   name: String,
   itemType: String
