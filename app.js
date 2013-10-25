@@ -174,6 +174,17 @@ app.get('/items', function(req, res) {
   });
 });
 
+app.post('/items', function(req, res) {
+  var item = new Item({
+    itemType: req.body.type,
+    name: req.body.name
+  });
+  item.save(function(err) {
+    if (err) throw err;
+    res.redirect('/items');
+  });
+});
+
 app.get('/orders', function(req, res) {
   var orderType = req.query.type;
   Order.find({ orderType: orderType }, function(err, orders) {
