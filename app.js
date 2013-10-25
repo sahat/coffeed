@@ -179,6 +179,18 @@ app.post('/orders', function(req, res) {
   });
 });
 
+app.get('/orders/new', function(req, res) {
+  console.log('test');
+  var orderType = req.query.type;
+  console.log(orderType);
+  Item.find({ itemType: orderType }, function(err, items) {
+    if (err) throw err;
+    console.log(items);
+    res.render('newOrder', { items: items });
+  });
+});
+
+
 app.get('/orders/:id', function(req, res) {
   var orderNumber = req.params.id;
   Order.findOne({ orderNumber: orderNumber }, function(err, order) {
@@ -195,12 +207,6 @@ app.put('/orders/:id', function(req, res) {
   });
 });
 
-app.get('/orders/new', function(req, res) {
-  var orderType = req.querystring.orderType;
-  Item.find({ itemType: orderType }, function(err, items) {
-    res.render('newOrder', { items: items });
-  });
-});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

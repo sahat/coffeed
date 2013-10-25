@@ -4,9 +4,9 @@ block content
   .row
     .span6
       h2 To Sell
-      a.btn.btn-block.btn-primary(href='/orders?type=sell') Order
-      a.btn.btn-block View Existing Orders
+      a.btn.btn-block.btn-primary(href='/orders/new?type=sell') Order
+      a.btn.btn-block(href='/orders?type=sell') View Existing Orders
     .span6
       h2 To Create
-      a.btn.btn-block.btn-primary(href='/orders?type=create') Order
-      .btn.btn-block View Existing Orders
+      a.btn.btn-block.btn-primary(href='/orders/new/?type=create') Order
+      a.btn.btn-block(href='/orders?type=create') View Existing Orders
