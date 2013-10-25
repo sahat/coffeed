@@ -164,7 +164,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/orders', function(req, res) {
-  var orderType = req.querystring.orderType;
+  var orderType = req.query.type;
   Order.find({ orderType: orderType }, function(err, orders) {
     res.render('existingOrders', { orders: orders });
   });
