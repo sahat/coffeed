@@ -116,7 +116,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/login', function(req, res) {
-  res.render('login');
+  res.render('login', {
+    user: req.user
+  });
 });
 
 app.post('/login',
@@ -127,7 +129,9 @@ app.post('/login',
 );
 
 app.get('/signup', function(req, res) {
-  res.render('signup');
+  res.render('signup', {
+    user: req.user
+  });
 });
 
 app.post('/signup', function(req, res) {
@@ -154,7 +158,9 @@ app.post('/signup', function(req, res) {
 });
 
 app.get('/', function(req, res){
-  res.render('index', { user: req.user });
+  res.render('index', {
+    user: req.user
+  });
 });
 
 app.get('/orders', function(req, res) {
