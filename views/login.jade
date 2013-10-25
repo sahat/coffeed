@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  h2 Login
-  form(action='/login', method='POST')
+  h2.page-header Login
+  form.well(action='/login', method='POST')
     label Username
     input.span3(type='text', name='username')
     label Password
