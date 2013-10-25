@@ -163,6 +163,17 @@ app.get('/', function(req, res){
   });
 });
 
+app.get('/items', function(req, res) {
+  Item.find(function(err, items) {
+    if (err) throw err;
+    console.log(items);
+    res.render('items', {
+      items: items,
+      user: req.user
+    });
+  });
+});
+
 app.get('/orders', function(req, res) {
   var orderType = req.query.type;
   Order.find({ orderType: orderType }, function(err, orders) {
@@ -180,15 +191,14 @@ app.post('/orders', function(req, res) {
 });
 
 app.get('/orders/new', function(req, res) {
-  console.log('test');
   var orderType = req.query.type;
-  console.log(orderType);
   Item.find({ itemType: orderType }, function(err, items) {
     if (err) throw err;
     console.log(items);
     res.render('newOrder', {
       items: items,
-      orderType: orderType
+      orderType: orderType,
+      user: req.user
     });
   });
 });

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h2 View / Add Items
+
+  form.well(action='/items', method='POST')
+    label Type
+    input.span3(type='text', name='type', placeholder='Sell / Create')
+    label Name
+    input.span3(type='text', name='name', placeholder='Sugar')
+    p
+      button.btn.btn-large.btn-info
+        i.icon-plus.icon-white
+        |  Add New Item
+
+  table.table.table-striped.table-bordered
+    thead
+        tr
+          th #
+          th Name
+          th Quantity
+      tbody
+        each item, i in items
+          tr
+            td.span1= i+1
+            td= item.name
+            td.span1
+              input(type='text', value=0)
+
