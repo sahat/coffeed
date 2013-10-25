@@ -43,7 +43,8 @@ html
                   li
                     a(href='#') One more separated link
             if user
-              p.navbar-text Signed in as #{user.username}
+              p.navbar-text.pull-right Signed in as
+                strong  #{user.username}
             else
               ul.nav.pull-right
                 li
