@@ -186,7 +186,10 @@ app.get('/orders/new', function(req, res) {
   Item.find({ itemType: orderType }, function(err, items) {
     if (err) throw err;
     console.log(items);
-    res.render('newOrder', { items: items });
+    res.render('newOrder', {
+      items: items,
+      orderType: orderType
+    });
   });
 });
 
