@@ -115,6 +115,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+
 app.post('/login',
   passport.authenticate('local', {
     successRedirect: '/',

@@ -45,10 +45,11 @@ html
             if user
               p.navbar-text Signed in as #{user.username}
             else
-              form.navbar-form.pull-right(action='/login', method='POST')
-                input.span2(type='text', placeholder='Username')
-                input.span2(type='password', placeholder='Password')
-                button.btn.btn-primary(type='submit') Sign in
+              ul.nav.pull-right
+                li
+                  a(href='/login') Sign in
+                li
+                  a(href='/signup') Create an account
     .container
       block content
       hr
