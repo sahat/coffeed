@@ -18,11 +18,14 @@ block content
         tr
           th #
           th Name
-          th Quantity
+          th Type
+          th Action
       tbody
         each item, i in items
           tr
             td.span1= i+1
             td= item.name
             td.span1 #{item.itemType}
+            td.span1
+              button.btn.btn-mini.btn-danger Delete
 
