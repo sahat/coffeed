@@ -211,7 +211,7 @@ app.post('/orders', function(req, res) {
 
 app.get('/orders/new', function(req, res) {
   var orderType = req.query.type;
-  Item.find({ itemType: orderType }, function(err, items) {
+  Item.find({ itemType: new RegExp(orderType, 'i') }, function(err, items) {
     if (err) throw err;
     console.log(items);
     res.render('newOrder', {
