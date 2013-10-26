@@ -185,6 +185,14 @@ app.post('/items', function(req, res) {
   });
 });
 
+app.del('/items/:id', function(req, res) {
+  Item.remove({ _id: req.params.id }, function(err) {
+    if (err) throw err;
+    console.log('Deleted item');
+    res.send(200);
+  });
+});
+
 app.get('/orders', function(req, res) {
   var orderType = req.query.type;
   Order.find({ orderType: orderType }, function(err, orders) {

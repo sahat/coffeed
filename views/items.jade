@@ -27,5 +27,17 @@ block content
             td= item.name
             td.span1 #{item.itemType}
             td.span1
-              button.btn.btn-mini.btn-danger Delete
+              button.btn.btn-mini.btn-danger(id='#{item.id}') Delete
+              script.
+                $('##{item.id}').click(function() {
 
+                  $.ajax({
+                    url: '/items/#{item.id}',
+                    type: 'DELETE',
+                    success: function() {
+                      location.reload()
+                    }
+                  });
+
+                  console.log('#{item.id}');
+                });
