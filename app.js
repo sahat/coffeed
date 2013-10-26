@@ -201,8 +201,11 @@ app.get('/orders', function(req, res) {
 });
 
 app.post('/orders', function(req, res) {
+
   var order = new Order({
-    // pass req.body data
+    orderType: req.body.orderType,
+    items: req.body.items,
+    location: req.body.location
   });
   order.save(function(err) {
     res.redirect('/orders');

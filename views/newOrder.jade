@@ -15,8 +15,31 @@ block content
             td.span1= i+1
             td= item.name
             td.span1
-              input(type='text', value=0)
+              input.quantity(type='text', value=0, data-name='#{item.name}')
 
   button.btn.btn-large.btn-success
     i.icon-shopping-cart.icon-white
     |  Place Order
+
+  script
+    $('button').click(function() {
+      var items = [];
+      var $quantityFields = $('.quantity');
+
+      $.each($quantityFields, function(index, field) {
+        items.push({
+          name: $(field).data('name'),
+          quantity: $(field).val()
+        });
+      });
+
+      var postData = {
+        orderType: orderType
+        items: items,
+        location: locations
+      };
+
+      $.post('/orders', postData, function() {
+        console.log('SUCCESSFULLY CREATED NEW ORDER');
+      });
+    });
