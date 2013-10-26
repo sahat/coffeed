@@ -29,15 +29,13 @@ block content
             td.span1
               button.btn.btn-mini.btn-danger(id='#{item.id}') Delete
               script.
-                $('##{item.id}').click(function() {
-
+                var $deleteButton = $('##{item.id}');
+                $deleteButton.click(function() {
                   $.ajax({
                     url: '/items/#{item.id}',
                     type: 'DELETE',
                     success: function() {
-                      location.reload()
+                      location.reload();
                     }
                   });
-
-                  console.log('#{item.id}');
                 });
