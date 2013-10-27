@@ -2,6 +2,12 @@ extends layout
 
 block content
   h2 Order Items (to #{orderType})
+  p
+    .btn-group(data-toggle='buttons-radio')
+      button.btn.btn-primary(type='button') Store 1
+      button.btn.btn-primary(type='button') Store 2
+      button.btn.btn-primary(type='button') Store 3
+      button.btn.btn-primary(type='button') Store 4
 
   table.table.table-striped.table-bordered
     thead
@@ -17,12 +23,12 @@ block content
             td.span1
               input.quantity(type='text', value=0, data-name='#{item.name}')
 
-  button.btn.btn-large.btn-success
+  button.btn.btn-large.btn-success(id='place-order')
     i.icon-shopping-cart.icon-white
     |  Place Order
 
   script
-    $('button').click(function() {
+    $('#place-order').click(function() {
       var items = [];
       var $quantityFields = $('.quantity');
 
@@ -34,9 +40,9 @@ block content
       });
 
       var postData = {
-        orderType: orderType
+        orderType: '#{orderType}',
         items: items,
-        location: locations
+        location: $('button.active').text()
       };
 
       $.post('/orders', postData, function() {
