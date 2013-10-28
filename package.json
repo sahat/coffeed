@@ -11,6 +11,7 @@
     "bcrypt": "*",
     "mongoose": "*",
     "passport": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "connect-flash": "*"
   }
 }
