@@ -46,6 +46,6 @@ block content
       };
 
       $.post('/orders', postData, function() {
-        console.log('SUCCESSFULLY CREATED NEW ORDER');
+        location.href = '/';
       });
     });
