@@ -35,7 +35,7 @@ block content
                     url: '/items/#{item.id}',
                     type: 'DELETE',
                     success: function() {
-                      location.reload();
+                      $deleteButton.closest('tr').remove();
                     }
                   });
                 });

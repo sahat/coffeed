@@ -185,7 +185,6 @@ app.post('/items', function(req, res) {
   });
 });
 
-// TODO: redriect to GET /items from DELETE
 app.del('/items/:id', function(req, res) {
   Item.remove({ _id: req.params.id }, function(err) {
     if (err) throw err;
