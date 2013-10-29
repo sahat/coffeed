@@ -200,14 +200,14 @@ app.get('/orders', function(req, res) {
 });
 
 app.post('/orders', function(req, res) {
-
   var order = new Order({
     orderType: req.body.orderType,
     items: req.body.items,
     location: req.body.location
   });
   order.save(function(err) {
-    res.redirect('/orders');
+    if (err) throw err;
+    res.send(200);
   });
 });
 

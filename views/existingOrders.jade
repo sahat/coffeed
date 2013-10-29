@@ -1,4 +1,7 @@
 extends layout
 
 block content
-  p test
+  h1= orders.length
+  ul.no-style
+    for order in orders
+      li #{order.orderType} : #{order.items}
