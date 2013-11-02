@@ -39,8 +39,11 @@ html
                   li
                     a(href='#') One more separated link
             if user
-              p.navbar-text.pull-right Signed in as
-                strong  #{user.username}
+              ul.nav.pull-right
+                  li
+                    a(href='#') #{user.username}
+                  li
+                    a(href='/logout') Logout
             else
               ul.nav.pull-right
                 li
