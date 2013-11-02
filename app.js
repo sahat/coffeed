@@ -128,6 +128,11 @@ app.post('/login',
     failureFlash: true })
 );
 
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
 app.get('/signup', function(req, res) {
   res.render('signup', {
     user: req.user
