@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var bcrypt = require('bcrypt');
+var _ = require('underscore');
 
 var app = express();
 mongoose.connect('localhost');
@@ -200,7 +201,13 @@ app.del('/items/:id', function(req, res) {
 app.get('/orders', function(req, res) {
   var orderType = req.query.type;
   Order.find({ orderType: orderType }, function(err, orders) {
-    res.render('existingOrders', { orders: orders });
+    var locations = [];
+    for (var i = 0; i < orders.length; i++) {
+      locations.push(orders[i].location);
+    };
+    locations = _.uniq(locations);
+    console.log(locations)
+    res.render('existingOrders', { orders: orders, locations: locations });
   });
 });
 
@@ -228,7 +235,6 @@ app.get('/orders/new', function(req, res) {
     });
   });
 });
-
 
 app.get('/orders/:id', function(req, res) {
   var orderNumber = req.params.id;

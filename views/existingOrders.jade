@@ -1,10 +1,18 @@
 extends layout
 
 block content
-  h1= orders.length
-  ul.no-style
+  for location in locations
+    .alert.alert-info
+      h4= location
     for order in orders
-      li #{order.orderType} : #{order.items}
+      if order.location == location
+        .well
+          ul.no-style
+              for item in order.items
+                li #{item.name}: #{item.quantity}
+          button.btn.btn-small.btn-danger Cancel Order
+          
+        
 
  // TODO: Delete Order button (only user who created the order)
 
