@@ -228,7 +228,7 @@ app.get('/orders/new', function(req, res) {
   Item.find({ itemType: new RegExp(orderType, 'i') }, function(err, items) {
     if (err) throw err;
     console.log(items);
-    res.render('newOrder', {
+    res.render('placeOrder', {
       items: items,
       orderType: orderType,
       user: req.user
