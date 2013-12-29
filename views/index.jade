@@ -2,11 +2,15 @@ extends layout
 
 block content
   .row
-    .span6
-      h2 To Sell
-      a.btn.btn-block.btn-primary(href='/orders/new?type=sell') Order
-      a.btn.btn-block(href='/orders?type=sell') View Existing Orders
-    .span6
-      h2 To Create
-      a.btn.btn-block.btn-primary(href='/orders/new/?type=create') Order
-      a.btn.btn-block(href='/orders?type=create') View Existing Orders
+    .col-sm-6
+      .lead.text-success.text-center
+        i.fa.fa-usd
+        |  Sell
+      a.btn.btn-block.btn-success(href='/orders/new?type=sell') Place Order
+      a.btn.btn-block.btn-default(href='/orders?type=sell') View Existing Orders
+    .col-sm-6
+      .lead.text-primary.text-center
+        i.fa.fa-cutlery
+        |  Create
+      a.btn.btn-block.btn-primary(href='/orders/new/?type=create') Place Order
+      a.btn.btn-block.btn-default(href='/orders?type=create') View Existing Orders
