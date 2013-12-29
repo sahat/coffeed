@@ -11,26 +11,32 @@ block content
         i.fa.fa-usd
         |  Sell
 
-  h4 Coffeed Store
+  h4
+    i.fa.fa-coffee
+    |  Coffeed Store
   for store in stores
     .radio
       label
         input(type='radio', name='storeRadios', value='#{store}')
         = store
 
+  br
+
+  h4
+    i.fa.fa-edit
+    |  Order Items
   table.table.table-striped.table-bordered
     thead
         tr
-          th #
           th Name
           th Quantity
       tbody
-        each item, i in items
+        for item in items[orderType]
           tr
-            td.span1= i+1
-            td= item.name
-            td.span1
-              input.quantity(type='text', value=0, data-name='#{item.name}')
+            td= item
+            td.col-xs-1
+              input.form-control.input-sm.quantity(type='text', value=0, data-name='#{item.name}')
+
   button.btn.btn-large.btn-success(data-order-type='#{orderType}')
-    i.icon-shopping-cart.icon-white
+    i.fa.fa-shopping-cart
     |  Place Order

@@ -229,8 +229,10 @@ app.get('/orders/new', function(req, res) {
   var stores = ['Store 1', 'Store 2', 'Store 3', 'Store 4'];
 
   var items = {
-    create: [],
-    sell: []
+    create: ['Cucumber', 'Tomato', 'Lettuce', 'Sugar', 'Salt', 'Spices',
+      'Ginger', 'Apples', 'Potatoes'],
+    sell: ['Hot Latte', 'Iced Latte', 'Americano', 'Cappuccino', 'Cinnamon',
+      'Hot Chocolate', 'Panini', 'Fruit Salad']
   };
 
 
