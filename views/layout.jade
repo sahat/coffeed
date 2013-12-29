@@ -7,49 +7,42 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+
     if message
       .alert.alert-danger Message
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
-          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+
+
+    nav.navbar.navbar-default.navbar-static-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='/') Coffeed
-          .nav-collapse.collapse
-            ul.nav
-              li.active
-                a(href='#') Home
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown')
-                  | Dropdown
-                  b.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Action
-                  li
-                    a(href='#') Another action
-                  li
-                    a(href='#') Something else here
-                  li.divider
-                  li.nav-header Nav header
-                  li
-                    a(href='#') Separated link
-                  li
-                    a(href='#') One more separated link
-            if user
-              ul.nav.pull-right
-                  li
-                    a(href='#') #{user.username}
-                  li
-                    a(href='/logout') Logout
-            else
-              ul.nav.pull-right
-                li
-                  a(href='/login') Sign in
-                li
-                  a(href='/signup') Create an account
+          a.navbar-brand(href='/')
+            i.fa.fa-coffee
+            |  Coffeed
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') Link
+            li
+              a(href='#') Link
+          if user
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='#') #{user.username}
+              li
+                a(href='/logout') Logout
+          else
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='/login') Sign in
+              li
+                a(href='/signup') Signup
+
+
     .container
       block content
       hr
