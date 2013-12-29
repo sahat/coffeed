@@ -228,8 +228,13 @@ app.get('/orders/new', function(req, res) {
   Item.find({ itemType: new RegExp(orderType, 'i') }, function(err, items) {
     if (err) throw err;
     console.log(items);
+
+
+    var stores = ['Store 1', 'Store 2', 'Store 3', 'Store 4'];
+
     res.render('placeOrder', {
       items: items,
+      stores: stores,
       orderType: orderType,
       user: req.user
     });

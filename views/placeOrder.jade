@@ -2,6 +2,12 @@ extends layout
 
 block content
   h2 Order Items (to #{orderType})
+
+  for store in stores
+    .radio
+      label
+        input(type='radio', name='storeRadios', value='#{store}')
+        = store
   p
     .btn-group(data-toggle='buttons-radio')
       button.btn.btn-primary(type='button') Store 1
