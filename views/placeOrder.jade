@@ -33,6 +33,8 @@ block content
             td= item
             td.col-xs-2
               input.form-control.input-sm.quantity(type='text', value=0, name='#{item}')
-  button.btn.btn-lg.btn-success(id='placeOrder', data-order-type='#{orderType}')
+  button.btn.btn-success(id='placeOrder', data-order-type='#{orderType}')
     i.fa.fa-shopping-cart
     |  Place Order
+  |&nbsp;
+  a.btn.btn-primary(href='#', id='viewPlacedOrder', style='display: none') View placed order
