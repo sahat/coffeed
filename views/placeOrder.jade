@@ -1,19 +1,23 @@
 extends layout
 
 block content
-  h2 Order Items (to #{orderType})
+  .lead.text-center
+    if orderType == 'create'
+      .text-primary
+        i.fa.fa-cutlery
+        |  Create
+    else
+      .text-success
+        i.fa.fa-usd
+        |  Sell
 
+  h4 Coffeed Store
   for store in stores
     .radio
       label
         input(type='radio', name='storeRadios', value='#{store}')
         = store
-  p
-    .btn-group(data-toggle='buttons-radio')
-      button.btn.btn-primary(type='button') Store 1
-      button.btn.btn-primary(type='button') Store 2
-      button.btn.btn-primary(type='button') Store 3
-      button.btn.btn-primary(type='button') Store 4
+
   table.table.table-striped.table-bordered
     thead
         tr
