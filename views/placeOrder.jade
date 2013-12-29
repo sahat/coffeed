@@ -34,7 +34,7 @@ block content
         for item in items[orderType]
           tr
             td= item
-            td.col-xs-1
+            td.col-xs-2
               input.form-control.input-sm.quantity(type='text', value=0, data-name='#{item.name}')
 
   button.btn.btn-large.btn-success(data-order-type='#{orderType}')

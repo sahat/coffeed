@@ -13,17 +13,17 @@ $('.btn-danger').click(function(eventObject) {
 });
 
 /**
- * New Order page
+ * Place A New Order page
  */
-$('.btn-success').click(function(eventObject) {
+$('.btn-success').click(function(e) {
   var items = [];
-  var orderType = $(eventObject.target).data('order-type')
-  var $quantityFields = $('.quantity');
+  var orderType = $(e.target).data('order-type')
+  var $qty = $('.quantity');
 
-  $.each($quantityFields, function(index, field) {
+  $.each($qty, function(index, input) {
     items.push({
-      name: $(field).data('name'),
-      quantity: $(field).val()
+      name: $(input).data('name'),
+      quantity: $(input).val()
     });
   });
 
