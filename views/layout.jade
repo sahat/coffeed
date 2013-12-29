@@ -25,21 +25,15 @@ html
             |  Coffeed
         .collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
-              a(href='#') Link
-            li
-              a(href='#') Link
+            li.active: a(href='#') Link
+            li: a(href='#') Link
           ul.nav.navbar-nav.navbar-right
             if user
-                li
-                  a(href='#') #{user.username}
-                li
-                  a(href='/logout') Logout
+              li: a(href='#') #{user.username}
+              li: a(href='/logout') Logout
             else
-                li
-                  a(href='/login') Login
-                li
-                  a(href='/signup') Signup
+              li: a(href='/login') Login
+              li: a(href='/signup') Signup
 
 
     .container
