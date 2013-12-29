@@ -1,7 +1,9 @@
 extends layout
 
 block content
-  h2.page-header Login
+  h2.page-header
+    i.fa.fa-sign-in
+    |  Login
   form(action='/login', method='POST')
     .form-group
       label Username
