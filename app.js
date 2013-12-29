@@ -212,6 +212,13 @@ app.get('/orders', function(req, res) {
 });
 
 app.post('/orders', function(req, res) {
+
+  // Sanitize data
+  if (!req.body.location) {
+    req.flash('message', 'Please select a store');
+    res.redirect('/new/' + req.body.orderType);
+  }
+
   var order = new Order({
     orderType: req.body.orderType,
     items: req.body.items,
@@ -223,18 +230,16 @@ app.post('/orders', function(req, res) {
   });
 });
 
-app.get('/orders/new', function(req, res) {
-  var orderType = req.query.type;
+app.get('/orders/new/:type', function(req, res) {
 
   var stores = ['Store 1', 'Store 2', 'Store 3', 'Store 4'];
 
   var items = {
-    create: ['Cucumber', 'Tomato', 'Lettuce', 'Sugar', 'Salt', 'Spices',
-      'Ginger', 'Apples', 'Potatoes'],
-    sell: ['Hot Latte', 'Iced Latte', 'Americano', 'Cappuccino', 'Cinnamon',
-      'Hot Chocolate', 'Panini', 'Fruit Salad']
+    create: ['Cucumber', 'Tomato', 'Lettuce', 'Sugar', 'Salt', 'Spices', 'Ginger', 'Apples', 'Potatoes'],
+    sell: ['Hot Latte', 'Iced Latte', 'Americano', 'Cappuccino', 'Cinnamon', 'Hot Chocolate', 'Panini', 'Fruit Salad']
   };
 
+  var orderType = req.params.type;
 
   res.render('placeOrder', {
     items: items,
@@ -242,6 +247,10 @@ app.get('/orders/new', function(req, res) {
     orderType: orderType,
     user: req.user
   });
+});
+
+app.get('/orders/new/sell', function(req, res) {
+
 });
 
 app.get('/orders/:id', function(req, res) {
