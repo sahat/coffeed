@@ -29,18 +29,17 @@ html
               a(href='#') Link
             li
               a(href='#') Link
-          if user
-            ul.nav.navbar-nav.navbar-right
-              li
-                a(href='#') #{user.username}
-              li
-                a(href='/logout') Logout
-          else
-            ul.nav.navbar-nav.navbar-right
-              li
-                a(href='/login') Sign in
-              li
-                a(href='/signup') Signup
+          ul.nav.navbar-nav.navbar-right
+            if user
+                li
+                  a(href='#') #{user.username}
+                li
+                  a(href='/logout') Logout
+            else
+                li
+                  a(href='/login') Login
+                li
+                  a(href='/signup') Signup
 
 
     .container
