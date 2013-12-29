@@ -15,25 +15,20 @@ $('.btn-danger').click(function(eventObject) {
 /**
  * Place A New Order page
  */
-$('.btn-success').click(function(e) {
-  var items = [];
+$('#placeOrder').click(function(e) {
   var orderType = $(e.target).data('order-type')
-  var $qty = $('.quantity');
+  var location = $('input:radio[name=location]:checked').val();
+  var items = [];
 
-  $.each($qty, function(index, input) {
+
+  $('.quantity').each(function(index, input) {
     items.push({
-      name: $(input).data('name'),
+      name: $(input).attr('name'),
       quantity: $(input).val()
     });
   });
 
-  var postData = {
-    orderType: orderType,
-    items: items,
-    location: $('button.active').text()
-  };
-
-  $.post('/orders', postData, function() {
-    location.href = '/';
+  $.post('/orders', { orderType: orderType, location: location, items: items}, function(data) {
+    console.log('data');
   });
 });

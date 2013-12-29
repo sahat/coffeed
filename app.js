@@ -213,10 +213,18 @@ app.get('/orders', function(req, res) {
 
 app.post('/orders', function(req, res) {
 
+  console.log(req.body.orderType);
+  console.log(req.body.items);
+  console.log(req.body.location);
+  console.log('===');
   // Sanitize data
+
+
+
+  return;
   if (!req.body.location) {
     req.flash('message', 'Please select a store');
-    res.redirect('/new/' + req.body.orderType);
+    res.redirect('/orders/new/' + req.body.orderType);
   }
 
   var order = new Order({
@@ -239,18 +247,12 @@ app.get('/orders/new/:type', function(req, res) {
     sell: ['Hot Latte', 'Iced Latte', 'Americano', 'Cappuccino', 'Cinnamon', 'Hot Chocolate', 'Panini', 'Fruit Salad']
   };
 
-  var orderType = req.params.type;
-
   res.render('placeOrder', {
     items: items,
     stores: stores,
-    orderType: orderType,
+    orderType: req.params.type,
     user: req.user
   });
-});
-
-app.get('/orders/new/sell', function(req, res) {
-
 });
 
 app.get('/orders/:id', function(req, res) {

@@ -10,18 +10,15 @@ block content
       .text-success
         i.fa.fa-usd
         |  Sell
-
   h4
     i.fa.fa-coffee
     |  Coffeed Store
   for store in stores
     .radio
       label
-        input(type='radio', name='storeRadios', value='#{store}')
+        input(type='radio', name='location', value='#{store}')
         = store
-
   br
-
   h4
     i.fa.fa-edit
     |  Order Items
@@ -35,8 +32,7 @@ block content
           tr
             td= item
             td.col-xs-2
-              input.form-control.input-sm.quantity(type='text', value=0, data-name='#{item.name}')
-
-  button.btn.btn-large.btn-success(data-order-type='#{orderType}')
+              input.form-control.input-sm.quantity(type='text', value=0, name='#{item}')
+  button.btn.btn-lg.btn-success(id='placeOrder', data-order-type='#{orderType}')
     i.fa.fa-shopping-cart
     |  Place Order
