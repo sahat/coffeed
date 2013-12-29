@@ -16,10 +16,9 @@ $('.btn-danger').click(function(eventObject) {
  * Place A New Order page
  */
 $('#placeOrder').click(function(e) {
-  var orderType = $(e.target).data('order-type')
+  var orderType = $(e.target).data('order-type');
   var location = $('input:radio[name=location]:checked').val();
   var items = [];
-
 
   $('.quantity').each(function(index, input) {
     items.push({
@@ -28,7 +27,18 @@ $('#placeOrder').click(function(e) {
     });
   });
 
-  $.post('/orders', { orderType: orderType, location: location, items: items}, function(data) {
-    console.log('data');
+  $.ajax({
+    type: 'POST',
+    url: '/orders',
+    data: { orderType: orderType, location: location, items: items },
+    success: function(data) {
+      $('#placeOrder').text('Done!').attr('disabled', true);
+      alertify.success(data);
+    },
+    error: function(jqXHR) {
+      alertify.error(jqXHR.responseText);
+    }
   });
+
+
 });

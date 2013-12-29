@@ -213,28 +213,17 @@ app.get('/orders', function(req, res) {
 
 app.post('/orders', function(req, res) {
 
-  console.log(req.body.orderType);
-  console.log(req.body.items);
-  console.log(req.body.location);
-  console.log('===');
-  // Sanitize data
-
-
-
-  return;
-  if (!req.body.location) {
-    req.flash('message', 'Please select a store');
-    res.redirect('/orders/new/' + req.body.orderType);
-  }
+  if (!req.body.location) return res.send(500, 'Please select a store');
 
   var order = new Order({
     orderType: req.body.orderType,
     items: req.body.items,
     location: req.body.location
   });
+
   order.save(function(err) {
     if (err) throw err;
-    res.send(200);
+    res.send(200, 'Your order has been placed');
   });
 });
 
