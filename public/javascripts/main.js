@@ -21,10 +21,12 @@ $('#placeOrder').click(function(e) {
   var items = [];
 
   $('.quantity').each(function(index, input) {
-    items.push({
-      name: $(input).attr('name'),
-      quantity: $(input).val()
-    });
+    if ($(input).val() != 0) {
+      items.push({
+        name: $(input).attr('name'),
+        quantity: $(input).val()
+      });
+    }
   });
 
   $.ajax({
