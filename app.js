@@ -198,8 +198,8 @@ app.del('/items/:id', function(req, res) {
   });
 });
 
-app.get('/orders', function(req, res) {
-  var orderType = req.query.type;
+app.get('/orders/:type', function(req, res) {
+  var orderType = req.params.type;
   Order.find({ orderType: orderType }, function(err, orders) {
     var locations = [];
     for (var i = 0; i < orders.length; i++) {
