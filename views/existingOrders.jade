@@ -1,17 +1,29 @@
 extends layout
 
 block content
-  for location in locations
-    .alert.alert-info
-      h4= location
-    for order in orders
-      if order.location == location
-        .well
-          ul.no-style
-              for item in order.items
-                li #{item.name}: #{item.quantity}
-          button.btn.btn-small.btn-danger Cancel Order
-          
+  .row
+    .col-sm-3
+      ul.list-group
+        li.list-group-header Location
+        for location in locations
+          li.list-group-item
+            a(href='#')
+              span.badge.pull-right  3
+              | #{location}
+
+    //- fetch data via querystring ?location=Store1
+    .col-sm-9
+      for location in locations
+        .alert.alert-info
+          h4= location
+        for order in orders
+          if order.location == location
+            .well
+              ul.no-style
+                  for item in order.items
+                    li #{item.name}: #{item.quantity}
+              button.btn.btn-small.btn-danger Cancel Order
+
         
 
  // TODO: Delete Order button (only user who created the order)
