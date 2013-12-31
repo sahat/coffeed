@@ -37,11 +37,8 @@ block content
       tbody
         for location in locations
           tr
-            td
-              a(href='#', class='location', data-name='location', data-type='text', data-pk='#{location.id}', data-url='/admin', data-title='Update Location') #{location.name}
-              | &nbsp;
-            td.col-xs-2
-              a.btn.btn-block.btn-xs.btn-danger(href='#') Delete
+            td: a(href='#', data-name='location', data-type='text', data-pk='#{location.id}', data-url='/admin', data-title='Update Location') #{location.name}
+            td: a.btn.btn-block.btn-xs.btn-danger(href='#') Delete
 
     script.
 
@@ -55,10 +52,8 @@ block content
           th Type
           th Action
     tbody
-      each item, i in items
+      for item in items
         tr
-          td.span1= i+1
-          td= item.name
-          td.span1 #{item.itemType}
-          td.span1
-            button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete
+          td: a(href='#', data-name='item', data-type='text', data-pk='#{item.id}', data-url='/admin', data-title='Update Item') #{item.name}
+          td= item.itemType
+          td: button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete

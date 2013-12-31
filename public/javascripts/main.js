@@ -46,5 +46,5 @@ $('#placeOrder').click(function(e) {
 
 $(function() {
   $.fn.editable.defaults.ajaxOptions = { type: 'PUT' };
-  $('.location').editable();
+  $('td a').editable();
 });
