@@ -146,15 +146,9 @@ app.get('/signup', function(req, res) {
 });
 
 app.post('/signup', function(req, res) {
-  var firstname = req.body.firstname;
-  var lastname = req.body.lastname;
-  var email = req.body.email;
-  var username = req.body.username;
-  var password = req.body.password;
-
   var user = new User({
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
+    firstName: req.body.firstname,
+    lastName: req.body.lastname,
     email: req.body.email,
     username: req.body.username,
     password: req.body.password
@@ -168,12 +162,18 @@ app.post('/signup', function(req, res) {
   });
 });
 
+/**
+ * Home Page
+ */
 app.get('/', function(req, res){
   res.render('index', {
     user: req.user
   });
 });
 
+/**
+ * Admin Dashboard
+ */
 app.get('/admin', function(req, res) {
   Item.find(function(err, items) {
     Location.find(function(err, locations) {
@@ -220,12 +220,14 @@ app.put('/admin', function(req, res) {
   }
 });
 
+// Delete an item
 app.del('/admin/items/:id', function(req, res) {
   Item.remove({ _id: req.params.id }, function() {
     res.send(200);
   });
 });
 
+// Delete a location
 app.del('/admin/locations/:id', function(req, res) {
   Location.remove({ _id: req.params.id }, function() {
     res.send(200);
