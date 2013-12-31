@@ -207,7 +207,7 @@ app.post('/admin/locations', function(req, res) {
   });
 });
 
-// Update a location
+// Update a location or an item
 app.put('/admin', function(req, res) {
   if (req.body.name === 'location') {
     Location.update({ _id: req.body.pk }, { $set: { name: req.body.value } }, function() {
@@ -220,9 +220,14 @@ app.put('/admin', function(req, res) {
   }
 });
 
-app.del('/admin/:id', function(req, res) {
-  Item.remove({ _id: req.params.id }, function(err) {
-    if (err) throw err;
+app.del('/admin/items/:id', function(req, res) {
+  Item.remove({ _id: req.params.id }, function() {
+    res.send(200);
+  });
+});
+
+app.del('/admin/locations/:id', function(req, res) {
+  Location.remove({ _id: req.params.id }, function() {
     res.send(200);
   });
 });

@@ -1,13 +1,18 @@
 /**
  * Items page
  */
-$('.btn-danger').click(function(eventObject) {
-  var id = $(eventObject.target).data('id');
+$('.delete').click(function(e) {
+  e.preventDefault();
+
+  var id = $(e.target).data('id');
+  var name = $(e.target).data('name');
+  var url = (name === 'location') ? '/admin/locations/' + id : '/admin/items/' + id;
+
   $.ajax({
-    url: '/items/' + id,
+    url: url,
     type: 'DELETE',
     success: function() {
-      $(eventObject.target).closest('tr').remove();
+      $(e.target).closest('tr').remove();
     }
   });
 });
@@ -46,5 +51,5 @@ $('#placeOrder').click(function(e) {
 
 $(function() {
   $.fn.editable.defaults.ajaxOptions = { type: 'PUT' };
-  $('td a').editable();
+  $('.editable').editable();
 });

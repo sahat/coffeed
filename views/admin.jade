@@ -37,23 +37,27 @@ block content
       tbody
         for location in locations
           tr
-            td: a(href='#', data-name='location', data-type='text', data-pk='#{location.id}', data-url='/admin', data-title='Update Location') #{location.name}
-            td: a.btn.btn-block.btn-xs.btn-danger(href='#') Delete
-
-    script.
-
+            td
+              a(href='#', class='editable', data-name='location', data-type='text', data-pk='#{location.id}', data-url='/admin', data-title='Update Location') #{location.name}
+            td.col-xs-1.text-center
+              a.text-danger(href='#', class='delete', data-name='location', data-id='#{location.id}') Delete
 
   h3 Items
-  table.table.table-striped.table-bordered
-    thead
-        tr
-          th #
-          th Name
-          th Type
-          th Action
-    tbody
-      for item in items
-        tr
-          td: a(href='#', data-name='item', data-type='text', data-pk='#{item.id}', data-url='/admin', data-title='Update Item') #{item.name}
-          td= item.itemType
-          td: button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete
+  if !items.length
+    .alert.alert-warning
+      p No items have been added yet
+  else
+    table.table.table-striped.table-bordered
+      thead
+          tr
+            th Name
+            th Type
+            th Action
+      tbody
+        for item in items
+          tr
+            td
+              a(href='#', class='editable', data-name='item', data-type='text', data-pk='#{item.id}', data-url='/admin', data-title='Update Item') #{item.name}
+            td= item.itemType
+            td.col-xs-1.text-center
+              a.text-danger(href='#', class='delete', data-name='item', data-id='#{item.id}') Delete
