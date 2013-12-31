@@ -7,7 +7,7 @@ block content
         legend Add Item
         .form-group
           label Type
-          input.form-control(type='text', name='type')
+          input.form-control(type='text', name='type', placeholder='Sell / Create')
         .form-group
           label Name
           input.form-control(type='text', name='name')
@@ -24,20 +24,38 @@ block content
           i.fa.fa-map-marker
           |  Add New Location
 
-  .row
-    .col-sm-12
-      table.table.table-striped.table-bordered
-        thead
-            tr
-              th #
-              th Name
-              th Type
-              th Action
-        tbody
-          each item, i in items
-            tr
-              td.span1= i+1
-              td= item.name
-              td.span1 #{item.itemType}
-              td.span1
-                button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete
+  h3 Locations
+  if !locations.length
+    .alert.alert-warning
+      p No locations have been added yet
+  else
+    table.table.table-striped.table-bordered
+      thead
+        tr
+          th Name
+          th Action
+      tbody
+        for location in locations
+          tr
+            td #{location}
+            td
+              ul.list-inline
+                li: a(href='#') Edit
+                li: a.text-danger(href='#') Delete
+
+  h3 Items
+  table.table.table-striped.table-bordered
+    thead
+        tr
+          th #
+          th Name
+          th Type
+          th Action
+    tbody
+      each item, i in items
+        tr
+          td.span1= i+1
+          td= item.name
+          td.span1 #{item.itemType}
+          td.span1
+            button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete

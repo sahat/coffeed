@@ -59,6 +59,11 @@ var Item = mongoose.model('Item', {
   itemType: String
 });
 
+var Location = mongoose.model('Location', {
+  name: String
+});
+
+
 var Order = mongoose.model('Order', {
   orderType: String,
   items: [{
@@ -171,11 +176,12 @@ app.get('/', function(req, res){
 
 app.get('/items', function(req, res) {
   Item.find(function(err, items) {
-    if (err) throw err;
-    console.log(items);
-    res.render('items', {
-      items: items,
-      user: req.user
+    Location.find(function(err, locations) {
+      res.render('items', {
+        items: items,
+        locations: locations,
+        user: req.user
+      });
     });
   });
 });
@@ -198,8 +204,11 @@ app.del('/items/:id', function(req, res) {
   });
 });
 
-app.get('/orders/:type', function(req, res) {
-  var orderType = req.params.type;
+/**
+ * Existing Orders
+ */
+app.get('/orders', function(req, res) {
+  var orderType = req.query.type;
   Order.find({ orderType: orderType }, function(err, orders) {
     var locations = [];
     for (var i = 0; i < orders.length; i++) {
@@ -229,7 +238,7 @@ app.post('/orders', function(req, res) {
 
 app.get('/orders/new/:type', function(req, res) {
 
-  var stores = ['Store 1', 'Store 2', 'Store 3', 'Store 4'];
+  var stores = ['Northern Blvd', 'Port Washington', 'CUNYLaw'];
 
   var items = {
     create: ['Cucumber', 'Tomato', 'Lettuce', 'Sugar', 'Salt', 'Spices', 'Ginger', 'Apples', 'Potatoes'],
