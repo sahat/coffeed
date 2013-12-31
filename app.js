@@ -174,7 +174,7 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/items', function(req, res) {
+app.get('/admin', function(req, res) {
   Item.find(function(err, items) {
     Location.find(function(err, locations) {
       res.render('items', {
@@ -186,7 +186,7 @@ app.get('/items', function(req, res) {
   });
 });
 
-app.post('/items', function(req, res) {
+app.post('/admin', function(req, res) {
   var item = new Item({
     itemType: req.body.type,
     name: req.body.name
@@ -197,7 +197,18 @@ app.post('/items', function(req, res) {
   });
 });
 
-app.del('/items/:id', function(req, res) {
+//app.post('/items/locations', function(req, res) {
+//  var item = new Item({
+//    itemType: req.body.type,
+//    name: req.body.name
+//  });
+//  item.save(function(err) {
+//    if (err) throw err;
+//    res.redirect('/items');
+//  });
+//});
+
+app.del('/admin/:id', function(req, res) {
   Item.remove({ _id: req.params.id }, function(err) {
     if (err) throw err;
     res.send(200);
