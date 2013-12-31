@@ -3,7 +3,7 @@ extends layout
 block content
   .row
     .col-xs-6
-      form(action='/items', method='POST')
+      form(action='/admin/items', method='POST')
         legend Add Item
         .form-group
           label Type
@@ -15,7 +15,7 @@ block content
           i.fa.fa-tag
           |  Add New Item
     .col-xs-6
-      form(action='/items', method='POST')
+      form(action='/admin/locations', method='POST')
         legend Add Location
         .form-group
           label Store Location

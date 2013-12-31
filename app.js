@@ -177,7 +177,7 @@ app.get('/', function(req, res){
 app.get('/admin', function(req, res) {
   Item.find(function(err, items) {
     Location.find(function(err, locations) {
-      res.render('items', {
+      res.render('admin', {
         items: items,
         locations: locations,
         user: req.user
@@ -186,27 +186,24 @@ app.get('/admin', function(req, res) {
   });
 });
 
-app.post('/admin', function(req, res) {
+app.post('/admin/items', function(req, res) {
   var item = new Item({
     itemType: req.body.type,
     name: req.body.name
   });
   item.save(function(err) {
-    if (err) throw err;
-    res.redirect('/items');
+    res.redirect('/admin');
   });
 });
 
-//app.post('/items/locations', function(req, res) {
-//  var item = new Item({
-//    itemType: req.body.type,
-//    name: req.body.name
-//  });
-//  item.save(function(err) {
-//    if (err) throw err;
-//    res.redirect('/items');
-//  });
-//});
+app.post('/admin/locations', function(req, res) {
+  var location = new Location({
+    name: req.body.name
+  });
+  location.save(function(err) {
+    res.redirect('/admin');
+  });
+});
 
 app.del('/admin/:id', function(req, res) {
   Item.remove({ _id: req.params.id }, function(err) {
