@@ -1,30 +1,43 @@
 extends layout
 
 block content
-  h2 View / Add Items
+  .row
+    .col-xs-6
+      form(action='/items', method='POST')
+        legend Add Item
+        .form-group
+          label Type
+          input.form-control(type='text', name='type')
+        .form-group
+          label Name
+          input.form-control(type='text', name='name')
+        button.btn.btn-success(type='submit')
+          i.fa.fa-tag
+          |  Add New Item
+    .col-xs-6
+      form(action='/items', method='POST')
+        legend Add Location
+        .form-group
+          label Store Location
+          input.form-control(type='text', name='name')
+        button.btn.btn-primary(type='submit')
+          i.fa.fa-map-marker
+          |  Add New Location
 
-  form.well(action='/items', method='POST')
-    label Type
-    input.span3(type='text', name='type', placeholder='Sell / Create')
-    label Name
-    input.span3(type='text', name='name', placeholder='Sugar')
-    p
-      button.btn.btn-large.btn-info
-        i.icon-plus.icon-white
-        |  Add New Item
-
-  table.table.table-striped.table-bordered
-    thead
-        tr
-          th #
-          th Name
-          th Type
-          th Action
-      tbody
-        each item, i in items
-          tr
-            td.span1= i+1
-            td= item.name
-            td.span1 #{item.itemType}
-            td.span1
-              button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete
+  .row
+    .col-sm-12
+      table.table.table-striped.table-bordered
+        thead
+            tr
+              th #
+              th Name
+              th Type
+              th Action
+        tbody
+          each item, i in items
+            tr
+              td.span1= i+1
+              td= item.name
+              td.span1 #{item.itemType}
+              td.span1
+                button.btn.btn-mini.btn-danger(data-id='#{item.id}') Delete
