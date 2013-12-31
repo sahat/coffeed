@@ -35,13 +35,16 @@ $('#placeOrder').click(function(e) {
     data: { orderType: orderType, location: location, items: items },
     success: function(data) {
       $('#placeOrder').text('Done!').attr('disabled', true);
-      $('#viewPlacedOrder').show().attr('href', '/orders');
+      $('#viewPlacedOrder').show().attr('href', '/orders/' + orderType);
       alertify.success(data);
     },
     error: function(jqXHR) {
       alertify.error(jqXHR.responseText);
     }
   });
+});
 
-
+$(function() {
+  $.fn.editable.defaults.ajaxOptions = { type: 'PUT' };
+  $('.location').editable();
 });

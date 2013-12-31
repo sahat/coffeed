@@ -37,11 +37,14 @@ block content
       tbody
         for location in locations
           tr
-            td #{location}
             td
-              ul.list-inline
-                li: a(href='#') Edit
-                li: a.text-danger(href='#') Delete
+              a(href='#', class='location', data-name='location', data-type='text', data-pk='#{location.id}', data-url='/admin', data-title='Update Location') #{location.name}
+              | &nbsp;
+            td.col-xs-2
+              a.btn.btn-block.btn-xs.btn-danger(href='#') Delete
+
+    script.
+
 
   h3 Items
   table.table.table-striped.table-bordered

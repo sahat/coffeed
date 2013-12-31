@@ -8,11 +8,12 @@ html
     link(rel='stylesheet', href='/stylesheets/alertify.core.css')
     link(rel='stylesheet', href='/stylesheets/alertify.bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(href='//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css', rel='stylesheet')
   body
 
     if message
       .alert.alert-danger Message
-
 
     nav.navbar.navbar-default.navbar-static-top(role='navigation')
       .container
@@ -39,11 +40,10 @@ html
 
     .container
       block content
-      hr
-      footer
-        p © Coffeed 2013
-
+    br
     script(src='/javascripts/jquery-1.10.2.min.js')
     script(src='/javascripts/bootstrap.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js')
+
     script(src='/javascripts/alertify.min.js')
     script(src='/javascripts/main.js')

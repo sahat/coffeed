@@ -1,13 +1,14 @@
 extends layout
 
 block content
+
   .row
     .col-sm-3
       ul.list-group
         li.list-group-header Location
         for location in locations
           li.list-group-item
-            a(href='#')
+            a(href='?location=#{location}')
               span.badge.pull-right  3
               | #{location}
 

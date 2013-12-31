@@ -186,6 +186,7 @@ app.get('/admin', function(req, res) {
   });
 });
 
+// Create a new item
 app.post('/admin/items', function(req, res) {
   var item = new Item({
     itemType: req.body.type,
@@ -196,6 +197,7 @@ app.post('/admin/items', function(req, res) {
   });
 });
 
+// Create a new location
 app.post('/admin/locations', function(req, res) {
   var location = new Location({
     name: req.body.name
@@ -203,6 +205,19 @@ app.post('/admin/locations', function(req, res) {
   location.save(function(err) {
     res.redirect('/admin');
   });
+});
+
+// Update a location
+app.put('/admin', function(req, res) {
+  if (req.body.name === 'location') {
+    Location.update({ _id: req.body.pk }, { $set: { name: req.body.value } }, function() {
+      res.send(200);
+    });
+  } else if (req.body.name === 'item') {
+    Item.update({ _id: req.body.pk }, { $set: { name: req.body.value } }, function() {
+      res.send(200);
+    });
+  }
 });
 
 app.del('/admin/:id', function(req, res) {
