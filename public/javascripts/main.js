@@ -40,7 +40,7 @@ $('#placeOrder').click(function(e) {
     data: { orderType: orderType, location: location, items: items },
     success: function(data) {
       $('#placeOrder').text('Done!').attr('disabled', true);
-      $('#viewPlacedOrder').show().attr('href', '/orders/' + orderType);
+      $('#viewPlacedOrder').show().attr('href', '/orders?type=' + orderType);
       alertify.success(data);
     },
     error: function(jqXHR) {
